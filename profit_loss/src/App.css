@@ -1,0 +1,19 @@
+.app {
+  text-align: center;
+  background: #2a6c84;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app_calculator{
+  height: 270px;
+  width: 440px;
+  border-radius: 30px;
+  box-shadow: 1px -1px 20px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,118 @@
+/* body {
+  background: "Url"(https://c8.alamy.com/comp/EMD5HM/calculator-a-background-EMD5HM.jpg);
+} */
+* {
+  border-radius: 10px;
+  font-weight: bold;
+}
+#head {
+  text-align: center;
+  font-size: 35px;
+  color: rgb(197, 246, 246);
+  background-color: teal;
+  text-transform: capitalize;
+  width: 20%;
+  margin: auto;
+  margin-bottom: 40px;
+  border: 3px rgb(29, 66, 66) dashed;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+#calc {
+  margin: auto;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  width: 300px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  text-align: center;
+  border: 1px solid black;
+  background-color: rgb(95, 212, 218);
+}
+#ip {
+  height: 50px;
+  width: 80%;
+  border: 1px solid black;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  margin: auto;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  overflow: scroll;
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+#ip::-webkit-scrollbar {
+  width: 5px;
+  /* background-color: yellow; */
+}
+#ip::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: rgb(95, 212, 218);
+}
+#ip::-webkit-scrollbar-thumb {
+  background-color: teal;
+  border-radius: 10px;
+}
+#ip::-webkit-scrollbar-corner {
+  border-radius: 10px;
+}
+/* #ip>div{
+  height: 45px;
+  width: 80%;
+  overflow: scroll;
+  scrollbar-track:;
+} */
+#keyboard {
+  height: 210px;
+  width: 80%;
+  margin: auto;
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  gap: 20px;
+  font-size: 30px;
+}
+#keyboard > div {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  font-size: 22px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+#keyboard > div:hover {
+  /* color: purple; */
+  /* background-color: rgb(217, 184, 252); */
+  cursor: pointer;
+}
+#extra {
+  height: 65%;
+  width: 80%;
+  margin: auto;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  gap: 18px;
+  font-size: 20px;
+}
+#extra > div {
+  color: white;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 7px;
+  cursor: pointer;
+  background-color: red;
+}
+.b {
+  background-color: black;
+  color: white;
+}
+.r {
+  color: white;
+  background-color: rgb(221, 41, 41);
+}
+.w {
+  background-color: white;
+}

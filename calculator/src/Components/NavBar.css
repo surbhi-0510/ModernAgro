@@ -1,0 +1,28 @@
+.navbarDiv{
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(158, 158, 246);
+    font-size: 18px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap:50px
+}
+
+.links{
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.links:hover{
+    color:slateblue;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 480px) {
+    .navbarDiv{
+        padding-top: 30px;
+        margin-bottom: 0px;
+    }
+}

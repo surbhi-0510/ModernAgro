@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area Conversion</title>
+    <link rel="stylesheet" href="./Styles/profit-loss.css"/>
+    <link rel="stylesheet" href="./Styles/area-convert.css"/>
+</head>
+<body>
+   <div id="head">Area Conversion Calculator</div> 
+   <div id="calc">
+    <form name="lengthCon">
+            <p class="Value">From</p> 
+                <select class="movement" name=fromUnit onChange="convertUnit()">
+                <option> meters
+                <option> kilometers
+                <option> miles
+        <option> feet 
+        <option> yards
+                </select>
+            
+            <p class="Options">To</p>
+            <p>
+                <select class="moves" name=toUnit onChange="convertUnit()">
+                <option> meters
+                <option> kilometers
+                <option> miles
+        <option> feet
+        <option> yards
+                </select>
+    </p>
+        
+            <p colspan="4"><div id="formula">meters = 1 meters</div></p>
+
+            <p class="Walk">Enter </p>
+            <p><input autocomplete="off" class="around" type="text" name="fromValue" value="1" size="5" maxlength="10"></p>
+            <p><input id="button" type=button value="Convert" onClick="convertUnit()"></p>
+            <p><span id="toValue"> 1</span></p>
+    </form>
+   </div>
+   <div><a href="calculator.html">Go Back To Calculator</a></div>
+</body>
+</html>
+<script src="./Scripts/area-convert.js"></script>

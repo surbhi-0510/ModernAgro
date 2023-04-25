@@ -1,0 +1,188 @@
+<!-- https://libretranslate.com/docs/#/ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translator</title>
+    <style>
+        body{
+            background: url('https://coolbackgrounds.io/images/backgrounds/white/white-triangle-369b8d2d.jpg');
+        }
+        #cont{
+            display: flex;
+            /* border: 1px solid black; */
+        }
+        #input,#output{
+            flex : 1;
+            margin: 5%;
+            height: 330px;
+            text-align: center;
+            /* background-color: plum; */
+            /* border: 1px solid red; */
+        }
+        #input-text{
+            width: 90%;
+            height: 250px;
+            font-size:20px;
+            padding: 5px;
+        }
+        #p_trans{
+            text-align: center;
+            font-size: 30px;
+            font-weight: bolder;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        #input>select,#output>select{
+            margin-bottom: 50px;
+            text-align: center;
+        }
+        #output_div{
+            text-align: left;
+            width: 90%;
+            height: 250px;
+            font-size:20px;
+            padding: 5px;
+            background-color: white;
+            border: 1px solid black; 
+            overflow: scroll;
+            overflow-x: hidden;
+        }
+    </style>
+</head>
+<body>
+    <p id="p_trans">Translator</p>
+    <div id="cont">
+        <div id="input">
+            <select id="input-select">
+                <option value="">Language</option>
+                <option value="en">English</option>
+                <option value="ar">Arabic</option>
+                <option value="az">Azerbaijani</option>
+                <option value="zh">Chinese</option>
+                <option value="cs">Czech</option>
+                <option value="da">Dutch</option>
+                <option value="eo">Esperanto</option>
+                <option value="fi">Finnish</option>
+                <option value="de">German</option>
+                <option value="el">Greek</option>
+                <option value="he">Hebrew</option>
+                <option value="hi">Hindi</option>
+                <option value="hu">Hungarian</option>
+                <option value="id">Indonesian</option>
+                <option value="ga">Irish</option>
+                <option value="it">Italian</option>
+                <option value="ja">Japanese</option>
+                <option value="ko">Korean</option>
+                <option value="fa">Persian</option>
+                <option value="pl">Polish</option>
+                <option value="pt">Portuguese</option>
+                <option value="ru">Russian</option>
+                <option value="sk">Slovak</option>
+                <option value="es">Spanish</option>
+                <option value="sv">Swedish</option>
+                <option value="tr">Turkish</option>
+                <option value="uk">Ukranian</option>
+            </select>
+            <textarea name="input-text" id="input-text" oninput="Debounce(Translate,1000)"></textarea>
+        </div>
+        <div id="output">
+            <select id="output-select">
+                <option value="">Language</option>
+                <option value="en">English</option>
+                <option value="ar">Arabic</option>
+                <option value="az">Azerbaijani</option>
+                <option value="zh">Chinese</option>
+                <option value="cs">Czech</option>
+                <option value="da">Dutch</option>
+                <option value="eo">Esperanto</option>
+                <option value="fi">Finnish</option>
+                <option value="de">German</option>
+                <option value="el">Greek</option>
+                <option value="he">Hebrew</option>
+                <option value="hi">Hindi</option>
+                <option value="hu">Hungarian</option>
+                <option value="id">Indonesian</option>
+                <option value="ga">Irish</option>
+                <option value="it">Italian</option>
+                <option value="ja">Japanese</option>
+                <option value="ko">Korean</option>
+                <option value="fa">Persian</option>
+                <option value="pl">Polish</option>
+                <option value="pt">Portuguese</option>
+                <option value="ru">Russian</option>
+                <option value="sk">Slovak</option>
+                <option value="es">Spanish</option>
+                <option value="sv">Swedish</option>
+                <option value="tr">Turkish</option>
+                <option value="uk">Ukranian</option>
+            </select>
+            <div id="output_div"></div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+let id
+// helper function
+function read(id){
+    return document.getElementById(id).value
+}
+
+async function Translate(){
+    try{
+        // 1. text to translate
+        let ip = read('input-text')
+        let ip_lang = read("input-select")
+        let op_lang = read("output-select")
+        // Post Request
+        console.log('ip :',ip)
+        const res = await fetch('https://libretranslate.de/translate',{
+            // method:'GET', //default
+            method:'POST',
+            body: JSON.stringify({
+                q:ip,
+                source:ip_lang,
+                target:op_lang,
+                format: 'text',
+            }),
+            // additional info about out request that server might need to know
+            headers:{
+                'Content-Type':'application/json'
+            }
+        })
+        if(ip_lang=='' && op_lang==""){
+            alert('Choose both languages')
+            window.location.reload()
+        }
+        else if(ip_lang==''){
+            alert('Choose input language')
+            window.location.reload()
+        }
+        else if(op_lang==""){
+            alert('Choose output language')
+            window.location.reload()
+        }
+        else{
+            console.log('response :',res)
+            const {translatedText} = await res.json()
+            if(translatedText!=undefined)
+                document.querySelector("#output>div").innerText = translatedText
+        }
+    }
+    catch(err){
+        console.log('error:',err)
+    }
+}
+
+
+// debouncing
+function Debounce(fun,delay){
+    if(id)
+        clearTimeout(id)
+    id = setTimeout(function(){
+        fun()
+    },delay)
+}
+</script>

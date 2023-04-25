@@ -1,0 +1,28 @@
+.Todobox {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid black;
+  width:fit-content;
+  height: auto;
+  margin: auto;
+  margin-top: 10px;
+  justify-content: center;
+  gap: 40px;
+  align-items: center;
+  padding: 8px;
+  background-color: rgba(243, 248, 251, 0.893);
+  border-radius: 10px;
+}
+
+.TodoboxInside {
+  display: flex;
+  gap: 10px;
+}
+
+.rem {
+  height: 22px;
+}
+
+.striked {
+  text-decoration: line-through red;
+}

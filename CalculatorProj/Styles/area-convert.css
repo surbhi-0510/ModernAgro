@@ -1,0 +1,29 @@
+#head{
+    width: 50%;
+  }
+form p{
+    margin-top:5px;
+    margin-bottom:5px;
+    font-size:30px;
+}
+form select,form input{
+    padding:5px;
+    background-color: aliceblue;
+}
+#calc{
+    padding-left: 0px;
+}
+#formula{
+    margin-top:10px;
+    margin-bottom: 10px;
+    width:100%;
+    color:black;
+    background-color: aliceblue;
+}
+#button{
+    padding:5px 10px 5px 10px;
+    border-radius:10px;
+}
+#toValue{
+    color:black;
+}

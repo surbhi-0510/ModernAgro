@@ -1,0 +1,27 @@
+*{
+    margin: auto;
+    background-color: #3b87a3;
+    font-size: 18px;
+}
+
+input{
+    /* background-color: transparent; */
+    border-radius: 20px;
+    background-color:#afb2b3;
+    padding: 5px 14px 5px 14px;
+}
+
+button{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 5px 10px 5px 10px;
+    background-color: #3ba385;
+}
+
+.priceDiv {
+  padding: 10px;
+  display: flex;
+  gap: 20px;
+}

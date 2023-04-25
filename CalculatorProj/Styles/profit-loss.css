@@ -1,0 +1,68 @@
+#head{
+  text-align: center;
+  font-size: 35px;
+  color: rgb(197, 246, 246);
+  background-color: teal;
+  text-transform: capitalize;
+  width: 30%;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  border: 3px rgb(29, 66, 66) dashed;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+#calc {
+    margin: auto;
+    box-shadow: rgba(96, 96, 182, 0.2) 0px 7px 29px 0px;
+    width: 350px;
+    padding-top: 25px;
+    padding-left: 20px;
+    padding-bottom: 25px;
+    text-align: center;
+    border: 1px solid teal;
+    color:teal;
+    font-size: larger;
+    margin-bottom:20px;
+    /* background-color: rgb(95, 212, 218); */
+    background-color: rgb(197, 246, 246);
+    border-radius: 30px;
+  }
+#cp{
+    padding:10px;
+    display: flex;
+    gap:20px;
+}
+#sp{
+    padding:5px;
+    display: flex;
+    gap:10px;
+    margin-bottom: 5px;
+}
+button,#button{
+    font-size: large;
+    padding:5px;
+    border:1px dashed white;
+    background-color:red;
+    color:white;
+}
+button:hover,#button:hover{
+    cursor: pointer;
+    background-color: teal;
+    color:rgb(197, 246, 246);
+    border:1px dashed rgb(197, 246, 246)
+}
+a{
+    /* font-size: larger; */
+    padding: 12px;
+    text-decoration: none;
+    margin-left:550px;
+    color: rgb(197, 246, 246);
+    background-color: teal;
+    border:1px dashed  rgb(197, 246, 246);
+    border-radius: 10px;
+}
+#cont{
+    margin-top:10px;
+    color:black;
+}

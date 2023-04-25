@@ -1,0 +1,134 @@
+.App {
+  text-align: center;
+}
+
+body {
+  background-image: linear-gradient(90deg, skyblue, pink);
+}
+
+.box {
+  width: 1000px;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 50px;
+  border-radius: 20px;
+  box-shadow: palegoldenrod 0px 22px 70px 4px;
+  padding-bottom: 20px;
+}
+
+.parentdiv {
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.inputbox {
+  padding: 20px;
+  border-radius: 30px;
+  margin-right: 5px;
+  font-size: 20px;
+  background-color: antiquewhite;
+}
+
+.box img {
+  height: 400px;
+  /* width:750px; */
+  width: 65%;
+  box-shadow: white 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.box div {
+  color: white;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.box div h1 {
+  font-size: 45px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: rgb(99, 94, 34);
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px palegoldenrod,
+    0 0 10px palegoldenrod, 0 0 15px palegoldenrod, 0 0 10px palegoldenrod,
+    0 0 15px palegoldenrod;
+}
+
+.box p {
+  padding: 10px 30px 10px 30px;
+  color: palegoldenrod;
+  font-size: 20px;
+}
+
+.searchbar {
+  /* margin:auto; */
+  width: 500px;
+  height: 50px;
+  display: flex;
+  /* border:1px solid blue; */
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.imagesearch {
+  height: 50px;
+  width: 50px;
+  /* border:1px solid red; */
+}
+
+.buttonback {
+  margin-left: 20px;
+  padding: 10px;
+  font-size: larger;
+  border-radius: 20px;
+}
+
+
+@media only screen and (max-width: 480px) {
+  .box {
+    width: 100%;
+  }
+
+  .box img {
+    margin: 20px 0px 10px 0px;
+    width: 80%;
+    height: 200px;
+  }
+
+  .parentdiv {
+    /* border: 1px solid red; */
+    width: 280px;
+    justify-content: flex-start;
+    /* padding-left: 50px; */
+    /* margin-left: 10px; */
+  }
+
+  .searchbar {
+    width: 100px;
+  }
+
+  .inputbox {
+    width: 130px;
+    font-size: 14px;
+  }
+
+  .imagesearch {
+    height: 40px;
+    width: 40px;
+  }
+
+  .buttonback {
+    padding: 5px;
+    font-size: 12px;
+  }
+
+  .pd {
+    /* border: 4px solid red; */
+    padding: 5px 0px 5px 0px;
+  }
+}
